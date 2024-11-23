@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   inputCntainer: {
     marginTop: 100,
     padding: 16,
-    backgroundColor: "#72063c",
+    backgroundColor: "#4e0329",
     marginHorizontal: 24,
     borderRadius: 8,
     elevation: 4, // this is for andriod only
