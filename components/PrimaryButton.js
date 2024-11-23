@@ -4,7 +4,7 @@ import { Text, View } from "react-native";
 const PrimaryButton = ({ children }) => {
   return (
     <View>
-      <Text>{children}</Text>git
+      <Text>{children}</Text>
     </View>
   );
 };
