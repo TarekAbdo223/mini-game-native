@@ -8,7 +8,6 @@ const StartGameScreen = ({ onPickNumber }) => {
 
   function handleInput(enteredText) {
     setEnteredNumber(enteredText);
-    console.log(enteredNumber);
   }
 
   function confirmInputHandler() {
@@ -28,7 +27,6 @@ const StartGameScreen = ({ onPickNumber }) => {
       return;
     }
     onPickNumber(enteredNumber);
-    console.log("valid one");
   }
 
   function resetInputHandler() {
