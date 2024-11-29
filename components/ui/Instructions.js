@@ -1,8 +1,8 @@
 import { StyleSheet, Text, View } from "react-native";
 import Colors from "../../constatnts/colors";
 
-const Instructions = ({ children }) => {
-  return <Text style={styles.instructionText}>{children}</Text>;
+const Instructions = ({ children, style }) => {
+  return <Text style={[styles.instructionText, style]}>{children}</Text>;
 };
 
 export default Instructions;
