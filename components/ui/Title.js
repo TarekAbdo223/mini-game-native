@@ -8,7 +8,8 @@ export default Title;
 
 const styles = StyleSheet.create({
   title: {
-    fontWeight: "bold",
+    fontFamily: "open-sans-bold",
+    // fontWeight: "bold",
     padding: 24,
     fontSize: 24,
     color: "white",
@@ -16,6 +17,5 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: "white",
     paddingVertical: 8,
-    // borderRadius: 10,
   },
 });
