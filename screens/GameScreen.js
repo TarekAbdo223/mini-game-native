@@ -1,4 +1,4 @@
-import { Alert, StyleSheet, Text, View } from "react-native";
+import { Alert, FlatList, StyleSheet, Text, View } from "react-native";
 import Title from "../components/ui/Title";
 import { useEffect, useState } from "react";
 import NumberContainer from "../components/game/NumberContainer";
@@ -24,6 +24,7 @@ const GameScreen = ({ userNumber, onGameOver }) => {
     userNumber,
   });
   const [currentGuess, setCurrentGuess] = useState(initialGuess);
+  const [guessRounds, setGuessRounds] = useState([initialGuess]);
 
   useEffect(() => {
     console.log(typeof currentGuess, typeof userNumber, "useEffect");
@@ -64,6 +65,7 @@ const GameScreen = ({ userNumber, onGameOver }) => {
       currentGuess,
     });
     setCurrentGuess(newRndNumber);
+    setGuessRounds((prevRounds) => [...prevRounds, newRndNumber]);
   }
   return (
     <View style={styles.screen}>
@@ -85,7 +87,12 @@ const GameScreen = ({ userNumber, onGameOver }) => {
         </View>
         {/* + - */}
       </Card>
-      {/* <View>LOG ROUNDS</View> */}
+      <View>
+        {/* {guessRounds.map((guess) => (
+          <Text key={guess}>{guess}</Text>
+        ))} */}
+        <FlatList></FlatList>
+      </View>
     </View>
   );
 };
