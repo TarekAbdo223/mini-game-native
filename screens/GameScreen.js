@@ -31,7 +31,7 @@ const GameScreen = ({ userNumber, onGameOver }) => {
     console.log(typeof currentGuess, typeof userNumber, "useEffect");
 
     if (currentGuess === +userNumber) {
-      onGameOver();
+      onGameOver(guessRounds.length);
       console.log("equal");
     }
   }, [currentGuess, onGameOver, userNumber]);
@@ -90,7 +90,7 @@ const GameScreen = ({ userNumber, onGameOver }) => {
         </View>
         {/* + - */}
       </Card>
-      <View>
+      <View style={styles.listContainer}>
         {/* {guessRounds.map((guess) => (
           <Text key={guess}>{guess}</Text>
         ))} */}
@@ -130,5 +130,9 @@ const styles = StyleSheet.create({
   },
   instruction: {
     marginBottom: 24,
+  },
+  listContainer: {
+    flex: 1,
+    padding: 16,
   },
 });
